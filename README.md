@@ -108,3 +108,15 @@
   <img width="1912" height="911" alt="Bruce force 2 " src="https://github.com/user-attachments/assets/d93a7222-0f29-4443-b383-391cb20899c9" />
 
 
+
+
+  ### Command: nginx
+- **Purpose:** Install and secure a web server.
+- **Output:** Service status `active (running)` and “Welcome to Nginx” page in browser.
+- **Takeaway:** Demonstrated ability to deploy and secure a service on Linux.
+<img width="1916" height="907" alt="NGINX 1" src="https://github.com/user-attachments/assets/a625faf3-95fd-4116-96cc-84d6ba93fd31" />
+<img width="1917" height="903" alt="NGINX 2 " src="https://github.com/user-attachments/assets/c9dcf434-6860-430d-96c1-adabafbd5536" />
+
+
+
+
