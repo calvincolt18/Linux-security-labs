@@ -1,0 +1,44 @@
+### Command: whoami
+- **Purpose:** Check current logged-in user
+- **Output:** ubuntu
+- **Takeaway:** I confirmed I’m logged in with the default Ubuntu user account.
+
+
+
+
+### Command: pwd
+- **Purpose:** Print working directory (where I am in the file system).
+- **Output:** /home/ubuntu
+- **Takeaway:** Validated my current directory.
+
+
+### Command: ls -l
+- **Purpose:** List files and directories with details (permissions, owner, size, date).
+- **Output:** Shows items in `/home/ubuntu` with their permission settings.
+- **Takeaway:** Learned how Linux controls access with `rwx` permissions.
+- **Expected Output:** A detailed list showing file permissions, owners, sizes, etc.
+- **Actual Output:** I typed the wrong flag at first and got `command not found`.
+- **Takeaway:** Learned that Linux commands are case-sensitive and require exact syntax.
+
+
+### Command: uname -a
+- **Purpose:** Display system/kernel information.
+- **Output:** Linux ip-172-31-xx-xx ... Ubuntu 24.04 ... x86_64 GNU/Linux
+- **Takeaway:** Confirmed I’m running Ubuntu 24.04 with the Linux kernel.
+
+
+### Command: df -h
+- **Purpose:** Show disk usage in human-readable format.
+- **Output:** Displays root filesystem size and free space.
+- **Takeaway:** Learned how to monitor server storage to avoid running out of space.
+
+### Command: free -m
+- **Purpose:** Check memory usage in MB.
+- **Output:** Shows “Mem” and “Swap” values.
+- **Takeaway:** Verified how much RAM is available on the server.
+
+
+### Command: uptime
+- **Purpose:** Check system uptime, users logged in, and load averages.
+- **Output:** 09:23:12 up 12 min, 1 user, load average: 0.00, 0.01, 0.05
+- **Takeaway:** Learned how to do a quick health check of the system’s stability.
