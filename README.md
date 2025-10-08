@@ -118,5 +118,83 @@
 <img width="1917" height="903" alt="NGINX 2 " src="https://github.com/user-attachments/assets/c9dcf434-6860-430d-96c1-adabafbd5536" />
 
 
+# Linux Security Lab: Automatic Security Updates
+
+**Goal:** Ensure the system automatically installs critical security patches.
+
+---
+
+## Steps
+```bash
+sudo apt update
+sudo apt install unattended-upgrades -y
+sudo dpkg-reconfigure -plow unattended-upgrades
+sudo systemctl status unattended-upgrades
+
+Verify
+
+cat /etc/apt/apt.conf.d/20auto-upgrades
+# Should show APT::Periodic::Update-Package-Lists "1";
+# and APT::Periodic::Unattended-Upgrade "1";
+<img width="1969" height="897" alt="Sec update 1" src="https://github.com/user-attachments/assets/8cf6fab5-f7d0-4f5a-8b2c-20c938f43e4a" />
+<img width="1900" height="270" alt="Sec update 2 " src="https://github.com/user-attachments/assets/fd8e984b-ff9d-479a-8982-b8cd00d56c1b" />
+<img width="1908" height="819" alt="Sec update 3 5" src="https://github.com/user-attachments/assets/1be51acb-d430-448f-88d3-b6377321bfba" />
+<img width="1913" height="179" alt="Sec update 3" src="https://github.com/user-attachments/assets/a712cdc8-d5ca-4621-98ca-07e36c49ba9d" />
+<img width="1915" height="354" alt="Sec update 4" src="https://github.com/user-attachments/assets/a18576fb-a91d-4c0a-b39f-1ccbc0a8e435" />
+
+
+
+What I Learned
+How to enable unattended upgrades.
+
+How to verify that automatic patching is active.
+
+
+
+## 2. File Integrity Monitoring (AIDE)
+
+```markdown
+# Linux Security Lab: File Integrity Monitoring with AIDE
+
+**Goal:** Detect unauthorized changes to critical system files.
+
+---
+
+## Steps
+```bash
+sudo apt install aide -y
+sudo aideinit
+sudo cp /var/lib/aide/aide.db.new /var/lib/aide/aide.db
+sudo aide --check | head -n 20
+
+Modify a file to test:
+
+echo "# test change" | sudo tee -a /etc/ssh/sshd_config
+sudo aide --check | head -n 40
+
+Restore:
+
+sudo sed -i '$d' /etc/ssh/sshd_config
+
+
+Verify
+Initial aide --check shows no differences.
+
+After modifying a file, aide --check reports changes.
+
+
+
+What I Learned
+How file integrity baselines are created.
+
+How AIDE alerts on unauthorized changes.
+
+
+
+
+
+
+
+
 
 
