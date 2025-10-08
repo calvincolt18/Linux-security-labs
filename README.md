@@ -136,11 +136,7 @@ Verify
 cat /etc/apt/apt.conf.d/20auto-upgrades
 # Should show APT::Periodic::Update-Package-Lists "1";
 # and APT::Periodic::Unattended-Upgrade "1";
-<img width="1969" height="897" alt="Sec update 1" src="https://github.com/user-attachments/assets/8cf6fab5-f7d0-4f5a-8b2c-20c938f43e4a" />
-<img width="1900" height="270" alt="Sec update 2 " src="https://github.com/user-attachments/assets/fd8e984b-ff9d-479a-8982-b8cd00d56c1b" />
-<img width="1908" height="819" alt="Sec update 3 5" src="https://github.com/user-attachments/assets/1be51acb-d430-448f-88d3-b6377321bfba" />
-<img width="1913" height="179" alt="Sec update 3" src="https://github.com/user-attachments/assets/a712cdc8-d5ca-4621-98ca-07e36c49ba9d" />
-<img width="1915" height="354" alt="Sec update 4" src="https://github.com/user-attachments/assets/a18576fb-a91d-4c0a-b39f-1ccbc0a8e435" />
+
 
 
 
