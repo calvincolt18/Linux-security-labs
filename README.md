@@ -150,4 +150,28 @@ System now applies daily security updates automatically.
 
 
 
+Lab 2: Auditing with auditd
+
+Purpose
+Log and monitor access to sensitive files and privileged activity using auditd.
+Steps Performed
+sudo apt install auditd -y
+sudo systemctl enable --now auditd
+echo '-w /etc/passwd -p wa -k passwd_changes' | sudo tee /etc/audit/rules.d/audit.rules
+sudo augenrules --load
+sudo systemctl restart auditd
+sudo nano /etc/passwd # open and exit
+sudo ausearch -k passwd_changes -ts today | tail -n 10
+
+Output (Evidence)
+<img width="1914" height="901" alt="Aud Lab3 " src="https://github.com/user-attachments/assets/51c0cf5f-2beb-4db2-83bf-63ec70664795" />
+<img width="1918" height="905" alt="Aud Lab 3 2 " src="https://github.com/user-attachments/assets/1a5b1d9e-7230-4a61-9d9c-779188cac934" />
+
+
+
+Takeaways
+Learned how to configure auditd rules for file monitoring.
+Observed audit logs capturing system file modifications.
+Understood how to search and interpret audit logs.
+
 
